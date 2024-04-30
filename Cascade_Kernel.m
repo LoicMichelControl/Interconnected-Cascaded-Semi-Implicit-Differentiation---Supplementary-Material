@@ -98,6 +98,8 @@
     if (display_error == 1 && sweep_h == 0)
     
         cd ./Results
+
+        ftSize = 40;
     
         fileName_error_png = sprintf("cascade_diff_case_%d_error.png", caseNumber);
     
@@ -108,26 +110,26 @@
         plot( time_vec(1:end), ce_1_vec(1:end), 'b', 'linewidth', 3)
         grid on
         xlim([0,60]);
-        ylabel('$e_1 \quad $','FontSize',50, 'Interpreter','latex')
+        ylabel('$e_1 \quad $','FontSize',ftSize, 'Interpreter','latex')
         grid on
-        set(gca,'FontSize',50)
+        set(gca,'FontSize',ftSize)
         subplot(312)
         hold on
         plot( time_vec(1:end), ce_2_vec(1:end), 'b', 'linewidth', 3)
         grid on
         xlim([0,60]);
-        ylabel('$e_2 \quad $','FontSize',50, 'Interpreter','latex')
+        ylabel('$e_2 \quad $','FontSize',ftSize, 'Interpreter','latex')
         set(gcf,'Color','w');
-        set(gca,'FontSize',50);
+        set(gca,'FontSize',ftSize);
         subplot(313)
         hold on
         plot( time_vec(1:end), ce_3_vec(1:end), 'b', 'linewidth', 3)
         grid on
         xlim([0,60]);
-        xlabel('Time [s]', 'FontSize',50, 'Interpreter', 'LaTex', 'FontSize',50);
-        ylabel('$e_3 \quad $','FontSize',50, 'Interpreter','latex')
+        xlabel('Time [s]', 'FontSize',ftSize, 'Interpreter', 'LaTex', 'FontSize',ftSize);
+        ylabel('$e_3 \quad $','FontSize',ftSize, 'Interpreter','latex')
         set(gcf,'Color','w');
-        set(gca,'FontSize',50);
+        set(gca,'FontSize',ftSize);
         set(gcf,'Position', pos1 - [pos1(3)/2,0,0,0])
         saveas(gcf,fileName_error_png)
     
@@ -141,18 +143,18 @@
         plot( time_vec, x1_d_vec, 'b', 'linewidth', 3);
         plot( time_vec, cz1_d_vec, '--m', 'linewidth', 3);
         xlim([0,60]);
-        legend('$x_1$','$z_1$', 'FontSize',50, 'Interpreter','latex')
+        legend('$x_1$','$z_1$', 'FontSize',ftSize, 'Interpreter','latex')
         set(gcf,'Color','w');
-        set(gca,'FontSize',50);
+        set(gca,'FontSize',ftSize);
         subplot(212)
         hold on
         plot( time_vec, x2_d_vec, 'k', 'linewidth', 3);
         plot( time_vec, cz2_d_vec, '--r', 'linewidth', 3);
         xlim([0,60]);
-        xlabel('Time [s]', 'FontSize',50, 'Interpreter', 'LaTex');
-        legend('$x_2$','$z_2$', 'FontSize',50, 'Interpreter','latex')
+        xlabel('Time [s]', 'FontSize',ftSize, 'Interpreter', 'LaTex');
+        legend('$x_2$','$z_2$', 'FontSize',ftSize, 'Interpreter','latex')
         set(gcf,'Color','w');
-        set(gca,'FontSize',50);
+        set(gca,'FontSize',ftSize);
         set(gcf,'Position', pos2 + [pos1(3)/2,0,0,0])
         saveas(gcf,fileName_est_states_png)
     

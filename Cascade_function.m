@@ -85,10 +85,10 @@
     
     le_ = floor( length( ce_1_vec )/2 ) + floor( length( ce_1_vec )/4 );
     
-    % Error stat.
-    exit = [ mean(ce_1_vec(le_:end)), max( abs(ce_1_vec(1:end)) ); ...
-        mean(ce_2_vec(le_:end)), max( abs(ce_2_vec(1:end)) ); ...
-        mean(ce_3_vec(le_:end)), max( abs(ce_3_vec(1:end)) ) ];
+    % Error statistics (AVG, MAX and SSE)
+    exit = [ mean(ce_1_vec(le_:end)), max( abs(ce_1_vec(1:end)) ), SSE_eval(ce_1_vec(le_:end)); ...
+             mean(ce_2_vec(le_:end)), max( abs(ce_2_vec(1:end)) ), SSE_eval(ce_2_vec(le_:end)); ...
+             mean(ce_3_vec(le_:end)), max( abs(ce_3_vec(1:end)) ), SSE_eval(ce_3_vec(le_:end)) ];
     
     
     
