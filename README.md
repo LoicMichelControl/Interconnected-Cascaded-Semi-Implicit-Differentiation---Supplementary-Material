@@ -2,14 +2,14 @@
 
     "An interconnected discrete time cascaded semi-implicit differentiation"
     
-    Code associated to the work submitted to the VSS'24 conference
+    Code associated to the work submitted to the VSS'24 conference.
     
     (c) [2024]  Nantes Université - Centrale Nantes - LS2N UMR 6004, Nantes
     (c) [2024]  Quartz EA 7393, ENSEA, Cergy-Pontoise
     Loïc MICHEL, Malek GHANES, Yannick AOUSTIN and Jean-Pierre BARBOT
     All rights reserved under MIT license.
     
-    This code runs all numerical examples given in the paper.
+    This code runs all numerical examples given in the paper <https://hal.science/hal-04564290>.
     Simply execute 'RUN_VSS_results.m' and all cases are displayed
     successively. In addition, the figures are saved in the sub-directory 'Results'
     and the associated statistics w.r.t. the estimation errors
